@@ -1,22 +1,24 @@
 <?php
 namespace app\views\cmpnts;
 
-class Footer
-{
-  private array $tags = [
-    "<small>Copyright &copy;",
-    "<time></time>",
-    "Alphabet Inc. All rights reserved.</small>"
-  ];
+use app\views\cmpnts\Cmpnt;
 
-  private function setYear()
+class Footer extends Cmpnt
+{
+  public function __construct()
+  {
+    array_push($this->tags, "<small>Copyright &copy;");
+    array_push($this->tags, "<time></time>");
+    array_push($this->tags, "Alphabet Inc. All rights reserved.</small>");
+  }
+  private function setYear(): void
   {
     array_walk($this->tags, function (&$val) {
       if (preg_match("/(<time).*/", $val))
         $val = "<time> " . date("Y") . " </time>";
     });
   }
-  public function render()
+  public function render(): void
   {
     $this->setYear();
     echo "<footer>";
