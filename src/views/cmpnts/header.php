@@ -5,28 +5,26 @@ use app\views\cmpnts\Cmpnt;
 
 class Header extends Cmpnt
 {
-  public function __construct()
+  public function addNavLink(string $tags): void
   {
-    array_push($this->tags, "<img src='assets/eXAM_logo.svg'
-    alt='The word 'exam' as the web app logo with the 'x' represented with a pencil and ruler' loading='lazy'>");
+    $this->addTag(<<<html
+          
+          <nav>
+            <ul>
+              $tags
+            </ul>
+          </nav>
+    html);
   }
-
-  public function addNavLink(...$tags): void
+  public function render()
   {
-    array_push($this->tags, "<nav><ul>");
-    foreach ($tags as $tag) {
-      array_push($this->tags, "<li>" . $tag . "</li>");
-    }
-    array_push($this->tags, "</ul></nav>");
-  }
-
-  public function render(): void
-  {
-    echo "<header>";
-    foreach ($this->tags as $tag) {
-      echo $tag;
-    }
-    echo "</header>";
+    echo <<<html
+    
+        <header>
+          <img src='assets/eXAM_logo.svg' alt='The word 'exam' as the web app logo with the 'x' represented with a pencil and ruler' loading='lazy'>
+          $this->tags
+        </header>
+    html;
   }
 }
 ?>
