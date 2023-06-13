@@ -1,0 +1,12 @@
+@import url("fonts.css");
+@import url("colors.css");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+}
