@@ -21,7 +21,7 @@ class Header extends Cmpnt
     echo <<<html
     
         <header>
-          <img src='assets/eXAM_logo.svg' alt='The word 'exam' as the web app logo with the 'x' represented with a pencil and ruler' loading='lazy'>
+          <img src="/assets/eXAM_logo.svg" alt="The word 'exam' as the web app logo with the 'x' represented with a pencil and ruler" loading="lazy">
           $this->tags
         </header>
     html;
