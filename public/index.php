@@ -7,6 +7,9 @@ class Router
 {
   private array $uris = [
     "/login" => "/src/views/login/index.php",
+    "/signup/profile" => "/src/views/signup/profile.php",
+    "/signup/role" => "/src/views/signup/role.php",
+    "/signup/password" => "/src/views/signup/password.php"
   ];
 
   public function route()
