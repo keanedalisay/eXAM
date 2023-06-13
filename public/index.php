@@ -6,7 +6,7 @@ spl_autoload_register(function (string $class) {
 class Router
 {
   private array $uris = [
-    "/login" => "\src\\views\login\index.php",
+    "/login" => "/src/views/login/index.php",
   ];
 
   public function route()
