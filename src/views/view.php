@@ -17,11 +17,14 @@ abstract class View
     $this->footer = new Footer();
   }
 
+  abstract public function updateHead(array $options);
+
+  abstract public function updateHeader(array $options);
+
   public function addTag(string $tag): void
   {
     $this->tags .= $tag;
   }
-  abstract public function updateHeader();
 
   public function render()
   {
