@@ -6,10 +6,10 @@ spl_autoload_register(function (string $class) {
 class Router
 {
   private array $uris = [
-    "/login" => "/src/views/login/index.php",
-    "/signup/profile" => "/src/views/signup/profile.php",
-    "/signup/role" => "/src/views/signup/role.php",
-    "/signup/password" => "/src/views/signup/password.php"
+    "/login" => "/src/views/entry/login/index.php",
+    "/signup/profile" => "/src/views/entry/signup/profile.php",
+    "/signup/role" => "/src/views/entry/signup/role.php",
+    "/signup/password" => "/src/views/entry/signup/password.php"
   ];
 
   public function route()
