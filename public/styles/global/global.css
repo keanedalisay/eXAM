@@ -10,3 +10,76 @@
   box-sizing: border-box;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
+
+html {
+  font-size: 10px;
+}
+
+.hdr {
+  position: relative;
+  height: 13.5rem;
+  border-bottom: 0.1rem solid #187516;
+  border-bottom: 0.1rem solid var(--bilbao, #187516);
+}
+.hdr-logo {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hdr-logo > img {
+  width: 11rem;
+  height: 4rem;
+}
+.nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 1rem;
+  width: 100%;
+  transform: translateX(-50%);
+}
+.links {
+  text-align: center;
+}
+.link {
+  position: relative;
+  margin: 0 2rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+.link:hover > a {
+  color: #212121;
+  color: var(--black, #212121);
+}
+.link:hover > a::before {
+  transform: scale(1) translateX(-50%);
+}
+.link > a::before {
+  content: "";
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  width: calc(100% + 1rem);
+  height: 0.3rem;
+  background: #187516;
+  transform: scale(0) translateX(-50%);
+  transform-origin: 50%;
+}
+.link > a {
+  min-width: 6rem;
+  height: 3.5rem;
+  display: inline-block;
+  color: #787878;
+  color: var(--boulder, #787878);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.link-isInPage > a {
+  color: #212121;
+  color: var(--black, #212121);
+}
+.link-isInPage > a::before {
+  transform: scale(1) translateX(-50%);
+}

@@ -9,8 +9,8 @@ class Header extends Cmpnt
   {
     $this->addTag(<<<html
           
-          <nav>
-            <ul>
+          <nav class="nav">
+            <ul class="links">
               $tags
             </ul>
           </nav>
@@ -20,8 +20,8 @@ class Header extends Cmpnt
   {
     echo <<<html
     
-        <header>
-          <img src="/assets/eXAM_logo.svg" alt="The word 'exam' as the web app logo with the 'x' represented with a pencil and ruler" loading="lazy">
+        <header class="hdr">
+          <a class="hdr-logo" href="/"><img src="/assets/eXAM_logo.svg" alt="The word 'exam' as the web app logo with the 'x' represented with a pencil and ruler" loading="lazy"></a>
           $this->tags
         </header>
     html;
