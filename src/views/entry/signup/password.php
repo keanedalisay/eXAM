@@ -1,32 +1,10 @@
 <?php
-namespace app\views\signup;
+namespace app\views\entry\signup;
 
-use app\views\View;
+use app\views\entry\Entry;
 
-class Password extends View
+class Password extends Entry
 {
-  public function updateHead()
-  {
-    $this->head->addTag(<<<html
-    <title>eXAM | Sign-Up</title>
-    html);
-  }
-  public function updateHeader()
-  {
-    $this->header->addNavLink(<<<html
-    
-              <li>Log-In</li>
-              <li>Sign-Up</li>
-    html);
-  }
-
-  public function addHeading()
-  {
-    $this->addTag(<<<html
-    <h1>Your password?</h1>
-    html);
-  }
-
   public function addForm(): void
   {
     $form = <<<html
@@ -75,9 +53,9 @@ class Password extends View
 }
 
 $signup_pswrd = new Password;
-$signup_pswrd->updateHead();
-$signup_pswrd->updateHeader();
-$signup_pswrd->addHeading();
+$signup_pswrd->updateHead(["title" => "eXAM | Sign-Up", "tags" => ""]);
+$signup_pswrd->updateHeader(["is_log_in" => false]);
+$signup_pswrd->addHeading("Your password?");
 $signup_pswrd->addForm();
 $signup_pswrd->render();
 

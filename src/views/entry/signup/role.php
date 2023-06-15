@@ -1,32 +1,10 @@
 <?php
-namespace app\views\signup;
+namespace app\views\entry\signup;
 
-use app\views\View;
+use app\views\entry\Entry;
 
-class Role extends View
+class Role extends Entry
 {
-  public function updateHead()
-  {
-    $this->head->addTag(<<<html
-    <title>eXAM | Sign-Up</title>
-    html);
-  }
-  public function updateHeader()
-  {
-    $this->header->addNavLink(<<<html
-    
-              <li>Log-In</li>
-              <li>Sign-Up</li>
-    html);
-  }
-
-  public function addHeading()
-  {
-    $this->addTag(<<<html
-    <h1>Are you a?</h1>
-    html);
-  }
-
   public function addForm(): void
   {
     $form = <<<html
@@ -104,9 +82,9 @@ class Role extends View
 }
 
 $signup_role = new Role;
-$signup_role->updateHead();
-$signup_role->updateHeader();
-$signup_role->addHeading();
+$signup_role->updateHead(["title" => "eXAM | Sign-Up", "tags" => ""]);
+$signup_role->updateHeader(["is_log_in" => false]);
+$signup_role->addHeading("Are you currently a?");
 $signup_role->addForm();
 $signup_role->render();
 ?>

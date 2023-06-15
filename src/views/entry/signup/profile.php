@@ -1,32 +1,10 @@
 <?php
-namespace app\views\signup;
+namespace app\views\entry\signup;
 
-use app\views\View;
+use app\views\entry\Entry;
 
-class Profile extends View
+class Profile extends Entry
 {
-  public function updateHead()
-  {
-    $this->head->addTag(<<<html
-    <title>eXAM | Sign-Up</title>
-    html);
-  }
-  public function updateHeader()
-  {
-    $this->header->addNavLink(<<<html
-    
-              <li>Log-In</li>
-              <li>Sign-Up</li>
-    html);
-  }
-
-  public function addHeading()
-  {
-    $this->addTag(<<<html
-    <h1>Who are you?</h1>
-    html);
-  }
-
   public function addForm(): void
   {
     $form = <<<html
@@ -56,9 +34,9 @@ class Profile extends View
 }
 
 $signup_profile = new Profile;
-$signup_profile->updateHead();
-$signup_profile->updateHeader();
-$signup_profile->addHeading();
+$signup_profile->updateHead(["title" => "eXAM | Sign-Up", "tags" => ""]);
+$signup_profile->updateHeader(["is_log_in" => false]);
+$signup_profile->addHeading("Who are you?");
 $signup_profile->addForm();
 $signup_profile->render();
 ?>

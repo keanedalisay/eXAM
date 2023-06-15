@@ -1,30 +1,10 @@
 <?php
-namespace app\views\login;
+namespace app\views\entry\login;
 
-use app\views\View;
+use app\views\entry\Entry;
 
-class Index extends View
+class Index extends Entry
 {
-  public function updateHead()
-  {
-    $this->head->addTag(<<<html
-    <title>eXAM | Log-In</title>
-    html);
-  }
-  public function updateHeader()
-  {
-    $this->header->addNavLink(<<<html
-    
-              <li>Log-In</li>
-              <li>Sign-Up</li>
-    html);
-  }
-  public function addHeading()
-  {
-    $this->addTag(<<<html
-    <h1>Welcome back.</h1>
-    html);
-  }
   public function addForm(): void
   {
     $form = <<<html
@@ -50,9 +30,9 @@ class Index extends View
 }
 
 $login = new Index;
-$login->updateHead();
-$login->updateHeader();
-$login->addHeading();
+$login->updateHead(["title" => "eXAM | Log-In", "tags" => ""]);
+$login->updateHeader(["is_log_in" => true]);
+$login->addHeading("Welcome back.");
 $login->addForm();
 $login->render();
 ?>
