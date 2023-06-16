@@ -40,7 +40,7 @@ abstract class View
     $this->header->render();
     echo <<<html
           
-          <main>
+          <main class="mn">
             $this->tags
           </main>
     html;
