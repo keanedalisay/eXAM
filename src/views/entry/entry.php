@@ -46,7 +46,7 @@ abstract class Entry extends View
   public function addHeading(string $text)
   {
     $this->addTag(<<<html
-    <h1>{$text}</h1>
+    <h1 class="hdng">{$text}</h1>
     html);
   }
 
