@@ -97,3 +97,17 @@ html {
 .link-isInPage > a::before {
   transform: scale(1) translateX(-50%);
 }
+
+.ftr {
+  position: relative;
+  height: 9rem;
+  border-top: 0.1rem solid #187516;
+  border-top: 0.1rem solid var(--bilbao);
+}
+.ftr-notice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
