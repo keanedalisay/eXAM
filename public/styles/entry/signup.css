@@ -1,0 +1,125 @@
+.roles {
+  margin: 0 auto;
+  max-width: 17rem;
+  text-align: center;
+}
+.role {
+  position: relative;
+  margin: 1rem;
+  width: 16rem;
+  height: 15rem;
+  display: inline-block;
+  background: #f4f4f4;
+  background: var(--wild_sand);
+  border-radius: 1rem;
+}
+
+.role:hover,
+.role:focus,
+.role:focus-visible {
+  background: #187516;
+  background: var(--bilbao);
+  color: #ffffff;
+  color: var(--white);
+}
+.role:hover > .role-icon > svg > g {
+  fill: #ffffff;
+  fill: var(--white);
+}
+
+.role-radio {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+.role-radio:checked + .role-icon > svg > g,
+.role-radio:focus + .role-icon > svg > g,
+.role-radio:focus-visible + .role-icon > svg > g {
+  fill: #ffffff;
+  fill: var(--white);
+}
+.role-radio:checked + .role-icon {
+  background: #187516;
+  background: var(--bilbao);
+}
+.role-radio:focus + .role-icon,
+.role-radio:focus-visible + .role-icon {
+  background: #187516;
+  background: var(--bilbao);
+  outline-width: 0.2rem;
+  outline-style: solid;
+}
+.role-radio:checked + .role-icon + .role-lbl,
+.role-radio:focus + .role-icon + .role-lbl,
+.role-radio:focus-visible + .role-icon + .role-lbl {
+  color: #ffffff;
+  color: var(--white);
+}
+.role-lbl {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  font-size: 1.6rem;
+  transform: translate(-50%, -50%);
+}
+.role-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+.role-icon > svg {
+  margin: 2rem 0 0 0;
+  width: 7rem;
+  height: 7rem;
+  fill: #212121;
+  fill: var(--black);
+}
+
+.contract {
+  margin: 0 auto;
+  width: 75%;
+  max-width: 32rem;
+  font-size: 1.4rem;
+}
+.contract-details {
+  /* margin: 0 1rem; */
+}
+.contract-details:last-of-type {
+  margin-top: 3rem;
+}
+
+.btns {
+  margin: 3rem auto 0 auto;
+  max-width: 22.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.btns-next,
+.btns-back {
+  margin: 0 auto;
+  width: 9rem;
+  height: 4rem;
+  display: block;
+  background: #f4f4f4;
+  background: var(--wild_sand);
+  border-radius: 1rem;
+  color: #787878;
+  color: var(--boulder);
+  font-size: 1.6rem;
+}
+.btns-next:hover,
+.btns-next:focus,
+.btns-next:focus-visible {
+  background: #187516;
+  background: var(--bilbao);
+  color: #f4f4f4;
+  color: var(--white);
+}
+.btns-back:hover,
+.btns-back:focus,
+.btns-back:focus-visible {
+  background: #c71111;
+  background: var(--thunderbird);
+  color: #f4f4f4;
+  color: var(--white);
+}
