@@ -38,7 +38,7 @@ class Index extends Entry
                 </figure>
                 <span class="entry-lbl entry-lbl--rmbr">Remember me</span>
               </label>
-              <button class="form-submit" type="submit">Submit</button>
+              <button class="form-submit form-submit--login" type="submit">Submit</button>
             </form>
     html;
     $this->addTag($form);
@@ -52,7 +52,6 @@ $login->updateHead(
     "tags" => <<<html
 
     <link href="/styles/entry/entry.css" rel="stylesheet">
-    <link href="/styles/entry/login.css" rel="stylesheet">
 html
   ]
 );
