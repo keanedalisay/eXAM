@@ -19,8 +19,8 @@ class Password extends Entry
                 <input class="entry-input" type="password" name="signup_cnfrm_pswrd">
               </label>
               <label class="entry entry--rmbr">
+                <input class="entry-checkbox entry-checkbox--rmbr" type="checkbox" name="login_save" value="1">
                 <figure class="checkbox">  
-                  <input class="entry-checkbox entry-checkbox--rmbr" type="checkbox" name="login_save" value="1">
                   <svg class="check" version="1.0" xmlns="http://www.w3.org/2000/svg"
                   width="471.000000pt" height="352.000000pt" viewBox="0 0 471.000000 352.000000"
                   preserveAspectRatio="xMidYMid meet">
