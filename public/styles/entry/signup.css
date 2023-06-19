@@ -77,19 +77,16 @@
 
 .contract {
   margin: 0 auto;
-  width: 75%;
+  width: 78%;
   max-width: 32rem;
   font-size: 1.4rem;
-}
-.contract-details {
-  /* margin: 0 1rem; */
 }
 .contract-details:last-of-type {
   margin-top: 3rem;
 }
 
 .btns {
-  margin: 3rem auto 0 auto;
+  margin: 5rem auto 0 auto;
   max-width: 22.5rem;
   display: flex;
   flex-flow: row nowrap;
