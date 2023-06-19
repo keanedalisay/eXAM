@@ -9,24 +9,20 @@ class Profile extends Entry
   {
     $form = <<<html
             
-            <form>
-              <fieldset>
-                <label>
-                  First Name
-                  <input type="text" name="signup_fst_name">
-                </label>
-                <label>
-                  Last Name
-                  <input type="text" name="signup_lst_name">
-                </label>
-                <label>
-                  Email
-                  <input type="email" pattern="[\w\d\-\.]+@[\w\d]+(\.[\w\d]+)+" name="signup_email">
-                </label>
-              </fieldset>
-              <fieldset>
-                <button>Next</button>
-              </fieldset>
+            <form class="form">
+              <label class="entry">
+                <span class="entry-lbl"> First Name </span>
+                <input class="entry-input" type="text" name="signup_fst_name">
+              </label>
+              <label class="entry">
+                <span class="entry-lbl"> Last Name </span>
+                <input class="entry-input" type="text" name="signup_lst_name">
+              </label>
+              <label class="entry">
+                <span class="entry-lbl"> Email </span>
+                <input class="entry-input" type="email" pattern="[\w\d\-\.]+@[\w\d]+(\.[\w\d]+)+" name="signup_email">
+              </label>
+              <button class="form-submit" type="submit">Next</button>
             </form>
     html;
     $this->addTag($form);
@@ -34,7 +30,15 @@ class Profile extends Entry
 }
 
 $signup_profile = new Profile;
-$signup_profile->updateHead(["title" => "eXAM | Sign-Up", "tags" => ""]);
+$signup_profile->updateHead(
+  [
+    "title" => "eXAM | Sign-Up",
+    "tags" => <<<html
+  
+      <link href="/styles/entry/entry.css" rel="stylesheet">
+html
+  ]
+);
 $signup_profile->updateHeader(["is_log_in" => false]);
 $signup_profile->addHeading("Who are you?");
 $signup_profile->addForm();
