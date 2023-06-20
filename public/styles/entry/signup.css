@@ -120,3 +120,37 @@
   color: #f4f4f4;
   color: var(--white);
 }
+
+@media screen and (min-width: 750px) {
+  .roles {
+    max-width: 55rem;
+  }
+  .role {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    width: 20rem;
+    height: 19rem;
+  }
+  .role-lbl {
+    font-size: 2rem;
+  }
+  .role-icon > svg {
+    margin: 3rem 0 0 0;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .contract {
+    font-size: 1.6rem;
+  }
+
+  .btns {
+    max-width: 30rem;
+  }
+  .btns-next,
+  .btns-back {
+    width: 11rem;
+    height: 5rem;
+    font-size: 1.8rem;
+  }
+}

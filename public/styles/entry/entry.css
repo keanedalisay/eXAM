@@ -139,3 +139,50 @@
     width: 15rem;
   }
 }
+
+@media screen and (min-width: 600px) {
+  .hdng {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .entry-lbl {
+    margin-left: 1.5rem;
+    font-size: 1.6rem;
+  }
+  .entry-input {
+    height: 4rem;
+    border-radius: 1.2rem;
+    font-size: 1.8rem;
+  }
+
+  .checkbox {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+  }
+  .check {
+    position: relative;
+    top: 50%;
+    width: 1.8rem;
+    height: 1.5rem;
+    transform: translateY(-50%);
+  }
+
+  .entry--rmbr {
+    width: 18rem;
+  }
+  .entry-lbl--rmbr {
+    margin-left: 2rem;
+    position: absolute;
+    top: 50%;
+    float: none;
+    transform: translateY(-50%);
+  }
+  .form-submit {
+    width: 11rem;
+    height: 5rem;
+    font-size: 1.8rem;
+  }
+}
