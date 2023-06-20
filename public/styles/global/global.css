@@ -59,6 +59,7 @@ html {
   position: relative;
   margin: 0 2rem;
   display: inline-block;
+  text-align: center;
   white-space: nowrap;
 }
 .link:hover > a {
@@ -110,4 +111,43 @@ html {
   left: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 600px) {
+  .ftr-notice {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .hdr {
+    height: 7.5rem;
+  }
+  .hdr-logo {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+  .nav {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    margin-top: 1rem;
+    width: auto;
+    transform: translateY(-50%);
+  }
+
+  .links::before {
+    top: 62%;
+  }
+  .links {
+    text-align: right;
+  }
+  .link {
+    position: relative;
+    margin: 0 2rem;
+    display: inline-block;
+    white-space: nowrap;
+  }
 }
