@@ -1,19 +1,20 @@
 .roles {
-  margin: 0 auto;
-  max-width: 17rem;
+  max-width: 17.5rem;
   text-align: center;
 }
 .role {
   position: relative;
-  margin: 1rem;
   width: 16rem;
   height: 15rem;
   display: inline-block;
   background: #f4f4f4;
   background: var(--wild_sand);
   border-radius: 1rem;
+  text-align: center;
 }
-
+.role:not(:last-of-type) {
+  margin-bottom: 5rem;
+}
 .role:hover,
 .role:focus,
 .role:focus-visible {
@@ -26,7 +27,6 @@
   fill: #ffffff;
   fill: var(--white);
 }
-
 .role-radio {
   position: absolute;
   left: 0;
@@ -75,61 +75,29 @@
   fill: var(--black);
 }
 
-.contract {
-  margin: 0 auto;
+.terms {
   width: 78%;
   max-width: 32rem;
   font-size: 1.4rem;
 }
-.contract-details:last-of-type {
+.terms-detail:last-of-type {
   margin-top: 3rem;
 }
 
-.btns {
-  margin: 5rem auto 0 auto;
-  max-width: 22.5rem;
-  display: flex;
-  flex-flow: row nowrap;
-}
-.btns-next,
-.btns-back {
-  margin: 0 auto;
-  width: 9rem;
-  height: 4rem;
-  display: block;
-  background: #f4f4f4;
-  background: var(--wild_sand);
-  border-radius: 1rem;
-  color: #787878;
-  color: var(--boulder);
-  font-size: 1.6rem;
-}
-.btns-next:hover,
-.btns-next:focus,
-.btns-next:focus-visible {
-  background: #187516;
-  background: var(--bilbao);
-  color: #f4f4f4;
-  color: var(--white);
-}
-.btns-back:hover,
-.btns-back:focus,
-.btns-back:focus-visible {
-  background: #c71111;
-  background: var(--thunderbird);
-  color: #f4f4f4;
-  color: var(--white);
-}
-
 @media screen and (min-width: 750px) {
+  .form--roles {
+    max-width: 75rem;
+  }
   .roles {
-    max-width: 55rem;
+    max-width: 75rem;
   }
   .role {
-    margin-left: 3rem;
-    margin-right: 3rem;
     width: 20rem;
     height: 19rem;
+  }
+  .role:not(:last-of-type) {
+    margin-right: 5rem;
+    margin-bottom: 0rem;
   }
   .role-lbl {
     font-size: 2rem;
@@ -138,19 +106,5 @@
     margin: 3rem 0 0 0;
     width: 8rem;
     height: 8rem;
-  }
-
-  .contract {
-    font-size: 1.6rem;
-  }
-
-  .btns {
-    max-width: 30rem;
-  }
-  .btns-next,
-  .btns-back {
-    width: 11rem;
-    height: 5rem;
-    font-size: 1.8rem;
   }
 }

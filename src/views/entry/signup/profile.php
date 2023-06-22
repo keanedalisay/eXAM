@@ -10,19 +10,23 @@ class Profile extends Entry
     $form = <<<html
             
             <form class="form">
-              <label class="entry">
-                <span class="entry-lbl"> First Name </span>
-                <input class="entry-input" type="text" name="signup_fst_name">
-              </label>
-              <label class="entry">
-                <span class="entry-lbl"> Last Name </span>
-                <input class="entry-input" type="text" name="signup_lst_name">
-              </label>
-              <label class="entry">
-                <span class="entry-lbl"> Email </span>
-                <input class="entry-input" type="email" pattern="[\w\d\-\.]+@[\w\d]+(\.[\w\d]+)+" name="signup_email">
-              </label>
-              <button class="form-submit" type="submit">Next</button>
+              <fieldset class="entries">
+                <label class="entry">
+                  <span class="entry-lbl"> First Name </span>
+                  <input class="entry-input" type="text" name="signup_fst_name">
+                </label>
+                <label class="entry">
+                  <span class="entry-lbl"> Last Name </span>
+                  <input class="entry-input" type="text" name="signup_lst_name">
+                </label>
+                <label class="entry entry--email">
+                  <span class="entry-lbl"> Email </span>
+                  <input class="entry-input" type="email" pattern="[\w\d\-\.]+@[\w\d]+(\.[\w\d]+)+" name="signup_email">
+                </label>
+              </fieldset>
+              <fieldset class="btns">
+                <button class="btns-submit" type="submit">Next</button>
+              </fieldset>            
             </form>
     html;
     $this->addTag($form);
