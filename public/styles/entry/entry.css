@@ -37,6 +37,17 @@
   clear: left;
   transform: translateX(-50%);
 }
+.entry-input[aria-invalid="true"] {
+  margin-bottom: 1.5rem;
+}
+.entry-err {
+  position: absolute;
+  top: 6.5rem;
+  left: 1rem;
+  color: #c71111;
+  color: var(--thunderbird);
+  font-weight: 600;
+}
 
 .checkbox {
   width: 2.5rem;
@@ -131,6 +142,13 @@
     height: 4rem;
     border-radius: 1.2rem;
     font-size: 1.8rem;
+  }
+  .entry-input[aria-invalid="true"] {
+    margin-bottom: 3rem;
+  }
+  .entry-err {
+    top: 7.5rem;
+    left: 1.5rem;
   }
 
   .checkbox {

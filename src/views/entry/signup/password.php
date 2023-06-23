@@ -13,11 +13,13 @@ class Password extends Entry
               <fieldset class="entries">
                 <label class="entry">
                   <span class="entry-lbl">Password</span>
-                  <input class="entry-input" type="password" name="signup_pswrd">
+                  <input class="entry-input" type="password" aria-invalid="false" aria-errormessage="err_pswrd" name="signup_pswrd">
+                  <span class="entry-err" id="err_pswrd"></span> 
                 </label>
                 <label class="entry">
                   <span class="entry-lbl">Confirm</span>
-                  <input class="entry-input" type="password" name="signup_cnfrm_pswrd">
+                  <input class="entry-input" type="password" aria-invalid="false" aria-errormessage="err_cnfrm_pswrd" name="signup_cnfrm_pswrd">
+                  <span class="entry-err" id="err_cnfrm_pswrd"></span> 
                 </label>
                 <label class="entry entry--rmbr">
                   <input class="entry-checkbox entry-checkbox--rmbr" type="checkbox" name="login_save" value="1">

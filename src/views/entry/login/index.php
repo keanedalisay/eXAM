@@ -12,12 +12,14 @@ class Index extends Entry
             <form class="form">
               <fieldset class="entries">
                 <label class="entry">
-                <span class="entry-lbl">Email</span>
-                <input class="entry-input" type="email" pattern="[\w\d\-\.]+@[\w\d]+(\.[\w\d]+)+" name="login_email" required>
+                  <span class="entry-lbl">Email</span>
+                  <input class="entry-input" type="email"  aria-invalid="false" aria-errormessage="err_email" pattern="[\w\d\-\.]+@[\w\d]+(\.[\w\d]+)+" name="login_email" required>
+                  <span class="entry-err" id="err_email"></span> 
                 </label>
                 <label class="entry">
                   <span class="entry-lbl">Password</span>
-                  <input class="entry-input" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                  <input class="entry-input" type="password" aria-invalid="false" aria-errormessage="err_pswrd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                  <span class="entry-err" id="err_pswrd"></span>
                 </label>
                 <label class="entry entry--rmbr">
                   <input class="entry-checkbox entry-checkbox--rmbr" type="checkbox" name="login_save" value="1">

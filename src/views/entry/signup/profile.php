@@ -13,15 +13,18 @@ class Profile extends Entry
               <fieldset class="entries">
                 <label class="entry">
                   <span class="entry-lbl"> First Name </span>
-                  <input class="entry-input" type="text" name="signup_fst_name">
+                  <input class="entry-input" type="text" aria-invalid="false" aria-errormessage="err_fst_name" name="signup_fst_name">
+                  <span class="entry-err" id="err_fst_name"></span> 
                 </label>
                 <label class="entry">
                   <span class="entry-lbl"> Last Name </span>
-                  <input class="entry-input" type="text" name="signup_lst_name">
+                  <input class="entry-input" type="text" aria-invalid="false" aria-errormessage="err_lst_name" name="signup_lst_name">
+                  <span class="entry-err" id="err_lst_name"></span> 
                 </label>
                 <label class="entry entry--email">
                   <span class="entry-lbl"> Email </span>
-                  <input class="entry-input" type="email" pattern="[\w\d\-\.]+@[\w\d]+(\.[\w\d]+)+" name="signup_email">
+                  <input class="entry-input" type="email" aria-invalid="false" aria-errormessage="err_email" pattern="[\w\d\-\.]+@[\w\d]+(\.[\w\d]+)+" name="signup_email">
+                  <span class="entry-err" id="err_email"></span> 
                 </label>
               </fieldset>
               <fieldset class="btns">
