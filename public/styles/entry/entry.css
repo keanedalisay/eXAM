@@ -1,7 +1,7 @@
 .mn {
   min-height: 50rem;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   align-items: center;
 }
 .hdng {
