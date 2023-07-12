@@ -1,0 +1,16 @@
+FROM php:7.4-apache
+
+RUN apt update && apt install -y nano
+RUN apt install -y curl
+
+RUN pecl install xdebug-3.1.6 && docker-php-ext-enable xdebug
+
+COPY --link /apache2/sites-available/eXAM.conf /etc/apache2/sites-available
+COPY --link /apache2/apache2.conf /etc/apache2/
+COPY --link /php.ini /usr/local/etc/php/
+
+RUN a2enmod rewrite
+RUN a2ensite eXAM && a2dissite 000-default
+
+WORKDIR /
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl -f http://localhost/ || exit 1
