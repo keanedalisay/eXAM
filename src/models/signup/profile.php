@@ -6,9 +6,7 @@ use app\models\helpers\Validate;
 
 class Profile extends Model
 {
-    use Validate {
-        validate as private;
-    }
+    use Validate;
 
     public function validate()
     {
@@ -77,7 +75,7 @@ class Profile extends Model
             $this->err_email = "Your email format is not valid.";
             return true;
         }
-        
+
         $this->invalid_email = "false";
         return false;
     }
