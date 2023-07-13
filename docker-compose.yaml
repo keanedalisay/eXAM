@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  apache:
+    container_name: apache
+    build:
+      context: .
+      dockerfile: Dockerfile_apache
+    restart: "unless-stopped"
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/eXAM/src/:ro
+      - ./public:/var/www/eXAM/public/:ro
+    networks:
+      - backend
+
+networks:
+  backend:
