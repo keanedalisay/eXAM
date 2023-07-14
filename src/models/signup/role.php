@@ -20,10 +20,18 @@ class Role extends Model
     parent::__construct($db, $session);
     $this->retrieveSession();
 
+    $this->invalid_role = "false";
+
     if (empty($_SESSION["saved_role_tkn"])) {
       $this->saved_role_tkn = $this->generateToken();
       $this->session->saved_role_tkn = $this->saved_role_tkn;
       return;
+    }
+
+    if (isset($_SESSION["signup_role"])) {
+      $_SESSION["signup_role"] === "student"
+        ? $this->student = "checked"
+        : $this->teacher = "checked";
     }
   }
 
@@ -59,13 +67,6 @@ class Role extends Model
       $this->err_role = "Please choose a role based on your current occupation to determine the types of features available for you.";
       return false;
     }
-
-    $this->invalid_role = "false";
-
-    if (filter_input(INPUT_POST, "signup_role") === "student")
-      $this->student = "checked";
-    else
-      $this->teacher = "checked";
 
     return true;
   }
