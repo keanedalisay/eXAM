@@ -20,6 +20,10 @@ class Profile extends Model
     parent::__construct($db, $session);
     $this->retrieveSession();
 
+    $this->invalid_fst_name = "false";
+    $this->invalid_lst_name = "false";
+    $this->invalid_email = "false";
+
     if (empty($_SESSION["saved_profile_tkn"])) {
       $this->saved_profile_tkn = $this->generateToken();
       $this->session->saved_profile_tkn = $this->saved_profile_tkn;
@@ -57,9 +61,6 @@ class Profile extends Model
 
   private function fieldsNotEmpty()
   {
-    $this->invalid_fst_name = "false";
-    $this->invalid_lst_name = "false";
-    $this->invalid_email = "false";
 
     if (empty($_POST["signup_fst_name"])) {
       $this->invalid_fst_name = "true";
