@@ -140,8 +140,8 @@ class Role extends Model
                  </label>
                </fieldset>
                <fieldset class="btns">
+                 <button class="btns-next" type="submit">Next</button>
                  <a class="btns-back" href="/signup/profile">Back</a>
-                 <button class="btns-submit" type="submit">Next</button>
                </fieldset>
              </form>
         html;

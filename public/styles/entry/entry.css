@@ -100,17 +100,60 @@
 .btns {
   max-width: 22.5rem;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
+  flex-flow: column nowrap;
   align-items: center;
+}
+.btns-submit {
+  border: .1rem solid #187516;
+  color: #187516;
+}
+.btns-back {
+  margin: 4rem auto 2rem auto;
+  position: relative;
+  color: #787878;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.btns-back::before {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  width: 175%;
+  height: .2rem;
+  background: #787878;
+  transform: translateX(-50%);
+}
+.btns-next:hover,
+.btns-next:focus,
+.btns-next:focus-visible {
+  background: #787878;
+  background: var(--boulder);
+  border: none;
+  color: #ffffff;
+  color: var(--white);
+}
+.btns-submit:hover,
+.btns-submit:focus,
+.btns-submit:focus-visible {
+  background: #187516;
+  background: var(--bilbao);
+  border: none;
+  color: #ffffff;
+  color: var(--white);
 }
 .btns-back:hover,
 .btns-back:focus,
 .btns-back:focus-visible {
+  color: #c71111;
+  color: var(--thunderbird);
+}
+.btns-back:hover:before,
+.btns-back:focus:before,
+.btns-back:focus-visible:before {
   background: #c71111;
   background: var(--thunderbird);
-  color: #f4f4f4;
-  color: var(--white);
 }
 @media screen and (min-width: 320px) {
   .entry {
@@ -178,10 +221,13 @@
   .btns {
     max-width: 30rem;
   }
-  .btns-submit,
-  .btns-back {
-    width: 11rem;
-    height: 5rem;
+  .btns-next, .btns-submit {
+    width: 13rem;
+    height: 5.5rem;
     font-size: 1.8rem;
+  }
+  .btns-back {
+    margin-top: 4rem;
+    font-size: 1.7rem;
   }
 }

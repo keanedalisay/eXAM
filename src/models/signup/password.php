@@ -142,8 +142,8 @@ class Password extends Model
               <p class="terms-detail">Please read our <a href="">Privacy Policy</a> to get an overview of the data we collect and how securely we store it.</p>
             </fieldset>
             <fieldset class="btns">
+              <button class="btns-submit"type="submit">Sign-In</button>
               <a class="btns-back" href="/signup/role">Back</a>
-              <button class="btns-submit"type="submit">Submit</button>
             </fieldset>
         </form>
     html;

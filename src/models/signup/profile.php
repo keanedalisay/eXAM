@@ -120,7 +120,7 @@ class Profile extends Model
                 <input type="hidden" name="signup_profile_tkn" value="{$this->saved_profile_tkn}">
             </fieldset>
             <fieldset class="btns">
-                <button class="btns-submit" type="submit">Next</button>
+                <button class="btns-next" type="submit">Next</button>
             </fieldset>            
         </form>
         html;
