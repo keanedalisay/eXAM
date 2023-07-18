@@ -102,8 +102,8 @@ class Password extends Model
   public function main()
   {
     $this->main_tags = <<<html
-        <h1 class="hdng">Your password?</h1>
-        <form class="form" action="/signup/password" method="POST">
+        <h1>Your password?</h1>
+        <form action="/signup/password" method="POST">
             <input type="hidden" name="signup_pswrd_tkn" value="{$this->saved_pswrd_tkn}">
             <fieldset class="entries">
               <label class="entry">

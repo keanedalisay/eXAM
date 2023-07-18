@@ -100,8 +100,8 @@ class Profile extends Model
   public function main()
   {
     $this->main_tags = <<<html
-        <h1 class="hdng">Who are you?</h1>
-        <form class="form" action="/signup/profile" method="POST">
+        <h1>Who are you?</h1>
+        <form action="/signup/profile" method="POST">
             <fieldset class="entries">
                 <label class="entry">
                     <span class="entry-lbl"> First Name </span>

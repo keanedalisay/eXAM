@@ -88,8 +88,8 @@ class Index extends Model
   public function main()
   {
     $this->main_tags = <<<html
-        <h1 class="hdng">Welcome back.</h1>
-        <form class="form" action="/login" method="POST">
+        <h1>Welcome back.</h1>
+        <form action="/login" method="POST">
             <fieldset class="entries">
                 <input type="hidden" name="login_tkn" value="{$this->saved_login_tkn}">
                 <label class="entry">

@@ -74,9 +74,9 @@ class Role extends Model
   public function main()
   {
     $this->main_tags = <<<html
-        <h1 class="hdng">Are you currently a?</h1>
+        <h1>Are you currently a?</h1>
         <h2 class="role_err" id="err_role">{$this->err_role}</h2>
-            <form class="form form--roles" action="/signup/role" method="POST">
+            <form class="form--roles" action="/signup/role" method="POST">
                <input type="hidden" name="signup_role_tkn" value="{$this->saved_role_tkn}">
                <fieldset class="roles">
                  <label class="role">

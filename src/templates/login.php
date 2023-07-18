@@ -15,22 +15,22 @@
 </head>
 
 <body>
-    <header class="hdr">
-        <a class="hdr-logo" href="/"><img src="/assets/eXAM_logo.svg"
+    <header>
+        <a class="header-logo" href="/"><img src="/assets/eXAM_logo.svg"
                 alt="The word 'exam' as the web app logo with the 'x' represented with a pencil and ruler"
                 loading="lazy"></a>
-        <nav class="nav">
+        <nav>
             <ul class="links">
                 <li class="link link--isInPage"><a href="/login">Log-In</a></li>
                 <li class="link"><a href="/signup/profile">Sign-Up</a></li>
             </ul>
         </nav>
     </header>
-    <main class="mn">
+    <main>
         <?= $this->model->main_tags ?>
     </main>
-    <footer class="ftr">
-        <small class="ftr-notice">Copyright &copy;
+    <footer>
+        <small class="footer-notice">Copyright &copy;
             <?= date("Y") ?> Alphabet Inc. All rights reserved.
         </small>
     </footer>
