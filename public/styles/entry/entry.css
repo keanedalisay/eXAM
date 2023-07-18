@@ -100,7 +100,7 @@ form {
   flex-flow: column nowrap;
   align-items: center;
 }
-.btns-submit {
+.btns-next, .btns-submit {
   border: .1rem solid #187516;
   color: #187516;
 }
@@ -122,18 +122,9 @@ form {
   background: #787878;
   transform: translateX(-50%);
 }
-.btns-next:hover,
-.btns-next:focus,
-.btns-next:focus-visible {
-  background: #787878;
-  background: var(--boulder);
-  border: none;
-  color: #ffffff;
-  color: var(--white);
-}
-.btns-submit:hover,
-.btns-submit:focus,
-.btns-submit:focus-visible {
+.btns-next:hover, .btns-submit:hover,
+.btns-next:focus, .btns-submit:focus,
+.bts-next:focus-visible, .btns-submit:focus-visible {
   background: #187516;
   background: var(--bilbao);
   border: none;
