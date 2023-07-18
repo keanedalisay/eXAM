@@ -14,6 +14,23 @@ services:
       - ./public:/var/www/eXAM/public/:ro
     networks:
       - backend
+  mysql:
+    container_name: mysql
+    build:
+      context: .
+      dockerfile: Dockerfile_mysql
+    restart: "unless-stopped"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_conf:/etc/mysql:rw
+      - mysql_data:/var/lib/mysql:rw
+    networks:
+      - backend
 
 networks:
   backend:
+
+volumes:
+  mysql_conf:
+  mysql_data:

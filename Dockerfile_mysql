@@ -1,0 +1,5 @@
+FROM mysql:5.7-debian
+
+RUN apt update && apt install -y nano
+
+ENV MYSQL_ROOT_PASSWORD=test
