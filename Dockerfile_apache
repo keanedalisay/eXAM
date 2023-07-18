@@ -4,6 +4,7 @@ RUN apt update && apt install -y nano
 RUN apt install -y curl
 
 RUN pecl install xdebug-3.1.6 && docker-php-ext-enable xdebug
+RUN docker-php-ext-install pdo_mysql && docker-php-ext-enable pdo_mysql
 
 COPY --link /apache2/sites-available/eXAM.conf /etc/apache2/sites-available
 COPY --link /apache2/apache2.conf /etc/apache2/
