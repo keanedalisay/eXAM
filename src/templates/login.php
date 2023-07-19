@@ -7,7 +7,7 @@
     <meta name="author" content="Keane Dalisay">
     <meta name="application-name" content="eXAM">
     <title>
-        eXAM | Sign-Up
+        eXAM | Log-In
     </title>
     <link href="/styles/global/global.css" rel="stylesheet">
     <link href="/styles/entry/entry.css" rel="stylesheet">
