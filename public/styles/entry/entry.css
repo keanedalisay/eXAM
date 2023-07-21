@@ -23,7 +23,7 @@ form {
   margin-left: 1rem;
   margin-bottom: 0.5rem;
   float: left;
-  color: #787878;
+  color: #767676;
   color: var(--boulder);
   font-size: 1.4rem;
 }
@@ -50,7 +50,7 @@ form {
   width: 2.5rem;
   height: 2.5rem;
   display: inline-block;
-  border: 0.1rem solid #787878;
+  border: 0.1rem solid #767676;
   border: 0.1rem solid var(--boulder);
   border-radius: 0.3rem;
   text-align: center;
@@ -107,7 +107,7 @@ form {
 .btns-back {
   margin: 4rem auto 2rem auto;
   position: relative;
-  color: #787878;
+  color: #767676;
   font-size: 1.7rem;
   font-weight: 700;
   text-decoration: none;
@@ -119,7 +119,7 @@ form {
   left: 50%;
   width: 175%;
   height: .2rem;
-  background: #787878;
+  background: #767676;
   transform: translateX(-50%);
 }
 .btns-next:hover, .btns-submit:hover,
