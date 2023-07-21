@@ -21,11 +21,12 @@ form {
 }
 .entry-lbl {
   margin-left: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   float: left;
   color: #767676;
   color: var(--boulder);
   font-size: 1.4rem;
+  font-weight: 600;
 }
 .entry-input {
   left: 50%;
@@ -165,6 +166,10 @@ form {
     margin-bottom: 7rem;
   }
 
+  .entry{
+    width: 87%;
+    max-width: 35rem;
+  }
   .entry-lbl {
     margin-left: 1.5rem;
     font-size: 1.6rem;
